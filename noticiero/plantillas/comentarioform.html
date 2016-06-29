@@ -1,0 +1,42 @@
+
+
+    <style type="text/css">
+<!--
+.Estilo3 {
+	color: #009900;
+	font-family: "Agency FB", "Arial Rounded MT Bold";
+	font-size: 36px;
+}
+-->
+    </style>
+</head>
+<style type="text/css">
+<!--
+.Estilo1 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+}
+-->
+</style>
+{% extends 'base.html' %}
+{% block titulo %}Nuevo Comentario{% endblock %}
+{% block encabezado %} 
+<h1 align="center" class="Estilo3">Comentarios</h1>
+	<p align="center" class="Estilo1">{% endblock %}
+{% block contenido %}	</p>
+	<form id='formulario' method='post' action=''>
+	  <div align="center">
+	    <p>{% csrf_token %}
+		{{formulario.as_p}}
+	    </p>
+	  </div>
+	
+	  <p align="center"><input type='submit' value='Confirmar'/></p>
+	  
+	</form>
+    <div align="center">
+      <p>&nbsp;</p>
+      <p>{% endblock %}
+      </p>
+    </div>
+</html>

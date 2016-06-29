@@ -1,0 +1,40 @@
+<style type="text/css">
+<!--
+.Estilo1 {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #333333;
+}
+-->
+</style>
+{% extends 'base.html' %}
+
+{% block titulo %} {{noticia.titulo}} {% endblock %}
+
+{% block encabezado %} 
+  <h1 align="center" class="Estilo1">{{noticia.titulo|title}}</h1>
+{% endblock %}
+
+{% block contenido %}
+<div id='noticia'>
+	<h2 align="center">&iquest;Que y como sucedio?</h2>
+	<p align="center">{{noticia.noticia}}</p>
+	</div>
+	<div id='lugar'>
+		<h2 align="center">&nbsp;</h2>
+</div>
+	<div id='referencia'>
+		<div align="center"><img src='{{MEDIA_URL}}{{noticia.imagen}}'>
+	      </div>
+	</div>
+	<div id='comentarios'>
+		<h2>Comentarios de la noticia </h2>
+			{% for item in comentarios %}
+				<p>{{item.texto}}</p>
+			{% empty %}
+				<p>Sin comentarios registrados</p>
+			{% endfor %}
+	</div>
+	<footer>
+	  <p>Publicado {{ noticia.tiempo_registro|date:'SHORT_DATETIME_FORMAT' }} Por: {{noticia.usuario}}</p>
+	</footer>
+{% endblock %}

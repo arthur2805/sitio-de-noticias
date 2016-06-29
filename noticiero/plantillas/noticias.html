@@ -1,0 +1,63 @@
+﻿<style type="text/css">
+<!--
+.Estilo4 {
+	font-family: "Agency FB", "Arial Rounded MT Bold";
+	font-size: 36;
+	color: #000000;
+	font-weight: bold;
+}
+.Estilo5 {font-size: 36; color: #000000; font-family: "Agency FB", "Arial Rounded MT Bold";}
+.Estilo6 {
+	font-family: "Agency FB", "Arial Rounded MT Bold";
+	font-size: 18px;
+}
+-->
+</style>
+<div align="center">{% extends 'base.html' %}
+  {% block titulo %} Noticias Publicadas {% endblock %}
+  
+  
+  
+  
+  
+  
+  {% block encabezado %}  
+  <span class="Estilo5">Nuestras Noticias</span><span class="Estilo4">
+  </p>
+   </span> 
+  </div>
+   <div align="left">
+  {% endblock %}
+	
+  {% block contenido %}<span class="Estilo6">  
+  <ul>    
+  
+  
+  </div>
+  </span></div>
+<ul><p align="left">&nbsp;</p>
+      <div align="left">
+        <table  border="0" align="center">
+          <tr>
+            <td width="286"><blockquote>
+              <ul>
+                <p>{% for dato in datos %} </p>
+                <li> <a href='{% url principal.views.detalle_noticia dato.id %}'>{{dato.titulo}}</a> <img src='{{MEDIA_URL}}{{dato.imagen}}' alt="a" /> </li>
+              {% empty %}
+                <li>Aún No Hay Noticias Registradas</li>
+              {% endfor %}
+              </ul>
+            </blockquote></td>
+          </tr>
+        </table>
+        <ul>
+        </ul>
+      </div>
+  <ul>
+    <p align="left">&nbsp;</p>
+  </ul>
+  <p align="left">{% endblock %}</p>
+  <p align="left">&nbsp;</p>
+  <p align="left">&nbsp;</p>
+</ul>
+  

@@ -1,0 +1,40 @@
+
+<style type="text/css">
+<!--
+.Estilo3 {
+	font-family: "Agency FB", "Arial Rounded MT Bold";
+	color: #009900;
+	font-size: 36px;
+}
+body,td,th {
+	color: #009900;
+}
+body {
+	background-color: #CCCCCC;
+}
+-->
+</style>
+{% extends 'base.html' %}
+{% block titulo %}Contactanos{% endblock %}
+{% block encabezado %} 
+	<h1><center>
+	  <span class="Estilo3">Contactanos</span>
+	</center>
+	
+	
+	</h1>
+    <p align="center">{% endblock %}
+      {% block contenido %}</p>
+    <form id='formulario' method='post' action=''>
+      <div align="center">
+        <p>{% csrf_token %}
+          {{formulario.as_p}}
+        </p>
+      </div>
+      <p align="center"><input type='submit'  value='Confirmar'/></p>
+	</form>
+    <div align="center">
+      <p>&nbsp;</p>
+      <p>{% endblock %}    </p>
+      <p>&nbsp;  </p>
+    </div>

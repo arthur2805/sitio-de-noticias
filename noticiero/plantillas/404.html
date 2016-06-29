@@ -1,0 +1,25 @@
+<style type="text/css">
+<!--
+.Estilo2 {font-family: "Agency FB", "Arial Rounded MT Bold"; }
+body,td,th {
+	color: #009900;
+}
+body {
+	background-color: #CCCCCC;
+}
+-->
+</style>
+{% extends 'base.html' %}
+
+{% comment %} Aqui van comentarios {% endcomment %}
+
+{% block titulo %} 404 {% endblock %}
+
+{% block encabezado %} 
+	<h1 align="center" class="Estilo2">Sitio de Noticias Ixtapaluca </h1>
+{% endblock %}
+
+{% block contenido %}
+  <h1 align="center" class="Estilo2">Servidor caido </h1>
+  <p align="center"><img src="../static/img/error_404.png" width="511" height="308" /></p>
+{% endblock %}
